@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float N,R,A;
+    N = 3.14159;
+    scanf("%f", &R);
+    A = (N * (R*R));
+    printf("A = %4.4f", A);
+    return 0;
+}
