@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int valor,va2,va3,i;
+    printf("Digite um valor:");
+    scanf("%d", &valor);
+    for(i=1; i<=valor; i++)
+    {
+        va2=i*i;
+        va3=i*i*i;
+        printf("%d %d %d\n",i,va2,va3);
+    }
+    return 0;
+}
