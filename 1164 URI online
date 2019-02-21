@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "portuguese");
+    int repeticoes, i, n, soma=0, a;
+    printf("Quantos valores serão inseridos?: ");
+    scanf("%d", &repeticoes);
+    for (i = 0; i < repeticoes; i++){
+        printf("Digite um valor: ");
+        scanf("%d", &n);
+        for(a = 1; a < n; a++){
+            if (n%a == 0){
+                soma += a;
+            }
+        }
+        if (soma == n){
+            printf("%d é perfeito\n", n);
+        }
+        else{
+            printf("%d não é perfeito\n", n);
+        }
+    }
+    return 0;
+}
