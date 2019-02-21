@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int valor1, valor2;
+    do{
+    printf("insira dois valores:");
+    scanf("%d %d", &valor1, &valor2);
+    if (valor1 > valor2){
+        printf("Decrescente\n");
+    }
+        else if (valor1 == valor2) {
+            printf("");
+        }
+            else{
+                printf("Crescente\n");
+            }
+    } while(valor1 != valor2);
+    return 0;
+}
