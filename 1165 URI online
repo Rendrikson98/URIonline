@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL,"portuguese");
+    int repeticoes, i, valor, contador, primo=0;
+    printf("Quantos valores serão inseridos?: ");
+    scanf("%d", &repeticoes);
+    for (i=0; i < repeticoes; i++){
+        printf("Digite um valor inteiro: ");
+        scanf("%d",&valor);
+        for (contador = 1; contador <= valor; contador++){
+            if (valor%contador == 0){
+                primo+= 1;
+            }
+        }
+        if (primo == 2){
+            printf("%d é primo\n", valor);
+        }
+        else{
+            printf("%d não é primo\n", valor);
+        }
+        primo = 0;
+    }
+    return 0;
+}
