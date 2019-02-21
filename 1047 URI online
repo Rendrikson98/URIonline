@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int horaI, MinI, horaF, minF, horaTotal, minutoTotal;
+    printf("Insira a hora inicial, minuto inicial, hora final, minuto final do jogo: ");
+    scanf("%d %d %d %d", &horaI, &MinI, &horaF, &minF);
+    if(horaI==minF && horaF==minF && minF==MinI){
+        minutoTotal=MinI-minF;
+        horaTotal=horaI-horaF+24;
+        printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", horaTotal, minutoTotal);
+    }
+        else if(horaI==horaF && MinI>minF){
+            horaTotal=24-horaI+horaF-1;
+            minutoTotal=MinI+minF-60;
+            printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", horaTotal, minutoTotal);
+        }
+            else if(horaI==horaF && minF>MinI){
+                horaTotal = horaF - horaI;
+                minutoTotal = minF - MinI;
+                printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", horaTotal, minutoTotal);
+            }
+
+                else if(MinI==minF && horaI<horaF){
+                    horaTotal=horaF-horaI;
+                    minutoTotal = 0;
+                    printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", horaTotal, minutoTotal);
+                }
+                    else if(MinI==minF && horaI>horaF){
+                        horaTotal=24-horaI+horaF;
+                        minutoTotal = 0;
+                        printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", horaTotal, minutoTotal);
+                    }
+                        else if(horaF>horaI && minF>MinI){
+                            horaTotal = horaF - horaI;
+                            minutoTotal = minF - MinI;
+                            printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", horaTotal, minutoTotal);
+                        }
+                            else if(horaI<horaF && MinI>minF){
+                                horaTotal = horaF - horaI - 1;
+                                minutoTotal = 60 - MinI+minF;
+                                printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", horaTotal, minutoTotal);
+                            }
+                                else if(horaI>horaF && MinI<minF){
+                                    horaTotal = 24-horaI-1+horaF;
+                                    minutoTotal = minF - MinI;
+                                    printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", horaTotal, minutoTotal);
+                                }
+                                    else if(horaI>horaF && MinI>minF){
+                                        horaTotal = 24 + horaF - horaI - 1;
+                                        minutoTotal = 60 + minF - MinI;
+                                        printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", horaTotal, minutoTotal);
+                                    }
+    return 0;
+}
