@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL,"portuguese");
+    int km;
+    float combustivel, total;
+    printf("Quantos KM foram percorridos?: ");
+    scanf("%d", &km);
+    printf("Quantos litros foram consumidos?: ");
+    scanf("%f", &combustivel);
+    total = km/combustivel;
+    printf("O consumo médio é: %.3f km/l", total);
+    return 0;
+}
