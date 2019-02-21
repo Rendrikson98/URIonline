@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int contador,contador2,valor,resultado=0;
+    for(contador = 0;contador < 100;contador++){
+        printf("Digite um valor: ");
+        scanf("%d",&valor);
+        if(valor==0){
+            break;
+        }
+        else if(valor%2==0){
+            for(contador2 = valor;contador2 <= valor+8;contador2+=2){
+                resultado += contador2;
+            }
+        }
+        else {
+            valor++;
+            for(contador2 = valor;contador2 <= valor+8;contador2+=2){
+            resultado += contador2;
+            }
+        }
+        printf("%d\n",resultado);
+        resultado=0;
+    }
+    return 0;
+}
